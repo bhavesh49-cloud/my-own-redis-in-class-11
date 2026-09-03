@@ -26,3 +26,8 @@ TTL: t=0 -> t=90s -> t=180s invalid auto delete
 
 ## Day 1 Code
 Simple in-memory key-value store in Python
+<img width="1280" height="853" alt="WhatsApp Image 2026-09-03 at 5 11 12 PM" src="https://github.com/user-attachments/assets/1c6dd620-80a5-4d3d-86f3-cb298a91e9a2" />
+<img width="1280" height="853" alt="WhatsApp Image 2026-09-03 at 5 11 13 PM" src="https://github.com/user-attachments/assets/767d4ecf-2dc1-40d6-ae47-82f4e44aae59" />
+<img width="1280" height="853" alt="WhatsApp Image 2026-09-03 at 5 11 13 PM (1)" src="https://github.com/user-attachments/assets/f56a6e17-1450-424e-b1a3-93026f1f25c0" />
+<img width="1280" height="853" alt="WhatsApp Image 2026-09-03 at 5 11 13 PM (2)" src="https://github.com/user-attachments/assets/8407d10e-5c35-4025-ac48-b18a26465f91" />
+
