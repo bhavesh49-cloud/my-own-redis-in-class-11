@@ -1,17 +1,28 @@
 # my-own-redis-in-class-11
-A simple Redis clone from scratch in Python - just to understand how it works internally
+# my-own-redis-in-class-11
 
-# redis from scratch
+## What I learned about Redis
 
-Learning how Redis works by building it.
+### 1. In-Memory Store
+Redis stores data in RAM, not disk. So it's FAST.
+Backend App -> Redis (fast) -> if miss, go to MongoDB (truth source, slow)
 
-Source: https://youtu.be/5YqP18Gyop0
+### 2. Cache-Aside Pattern
+User -> Node Server -> Redis
+If cache hit = fast response
+If miss = slow, get from DB and fill cache
+Used by Swiggy, Zomato - Same data, hot data, fast response
 
-Day 1: Basic TCP server listening on 6379
+### 3. 4 Use Cases
+- OTP Store: OTP: 434343 TTL 3 min (auto delete)
+- Rate Limiting: IP count 6, cooldown TTL 10 min
+- Session Store: server A and server B share same Redis
+- Job Queue: Redis List + Workers pulling
 
-<img width="1280" height="853" alt="WhatsApp Image 2026-09-03 at 5 11 12 PM" src="https://github.com/user-attachments/assets/876b281a-8cb3-445c-b757-c7ea8fb10a70" />
-<img width="1280" height="853" alt="WhatsApp Image 2026-09-03 at 5 11 13 PM" src="https://github.com/user-attachments/assets/bd109f3b-bad0-42e9-a73c-73a0e197c187" />
-<img width="1280" height="853" alt="WhatsApp Image 2026-09-03 at 5 11 13 PM (1)" src="https://github.com/user-attachments/assets/d0fc4227-7443-4da6-95a7-703f5e133964" />
-<img width="1280" height="853" alt="WhatsApp Image 2026-09-03 at 5 11 13 PM (2)" src="https://github.com/user-attachments/assets/7f1c8ef7-f65f-4dfe-ba0d-0e63093a429c" />
+### 4. Important Note
+IT IS NOT A SOLUTION FOR EVERY PROBLEM
+Use for: Read pressure, Temp data expire, Shared counter, background jobs
+TTL: t=0 -> t=90s -> t=180s invalid auto delete
 
-Next: PING command
+## Day 1 Code
+Simple in-memory key-value store in Python
