@@ -27,3 +27,16 @@ TTL: t=0 -> t=90s -> t=180s invalid auto delete
 ## Day 1 Code
 Simple in-memory key-value store in Python
 
+## Day 2 - Setup Complete ✅
+
+**What I built today:**
+- Initialized Node.js project with `package.json`
+- Setup Docker with MongoDB (27017) + My Redis Clone (6379)
+- Connected MongoDB using Mongoose - connection successful
+- Architecture implemented: `App -> My Redis (RAM) -> MongoDB (Disk)`
+
+**How I tested:**
+```bash
+docker ps -> mongo running
+npm run dev -> Server running on 6379
+mongoose.connect() -> Connected to MongoDB
