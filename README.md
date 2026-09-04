@@ -38,5 +38,5 @@ Simple in-memory key-value store in Python
 **How I tested:**
 ```bash
 docker ps -> mongo running
-npm run dev -> Server running on 6379
+npm run dev -> Server running on 3000
 mongoose.connect() -> Connected to MongoDB
