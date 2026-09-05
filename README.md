@@ -40,3 +40,37 @@ Simple in-memory key-value store in Python
 docker ps -> mongo running
 npm run dev -> Server running on 3000
 mongoose.connect() -> Connected to MongoDB
+
+### Day 03: Site Banner API - Redis Strings
+
+**Why a Banner needs Redis?**
+Site banner is displayed on every page load. Fetching it from 
+a primary DB (Postgres/Mongo) for every request adds unnecessary 
+load and latency. Redis stores it in-memory for <5ms access.
+
+**Implementation:**
+- Key Design: `app:banner` (namespaced to avoid collision)
+- Type Used: String - because banner is a single atomic value
+
+**API & Redis Mapping:**
+| API | Redis Command | Purpose |
+| :--- | :--- | :--- |
+| POST /banner | SET app:banner "msg" | Create/Update banner |
+| GET /banner | GET app:banner | Fetch banner |
+| DELETE /banner | DEL app:banner | Remove banner |
+| GET /banner/exists | EXISTS app:banner | Check availability |
+
+**What I Learned & Debugged:**
+- Fixed `Invalid URL` by correcting Thunder Client URL format
+- Fixed `Request Failed` (port 3000 not listening) - learned to ensure `npm run dev` is running
+- `ioredis` vs `redis` client difference - using `ioredis` for better cluster support
+- Duplicate import error in `index.js`
+
+**Stack:** Node.js, Express 4.18.3, ioredis 5.4.1
+
+**Test:**
+```json
+POST /banner
+{ "message": "yokoso watasino soul society" }
+→ { "success": true }
+
