@@ -74,3 +74,7 @@ POST /banner
 { "message": "yokoso watasino soul society" }
 → { "success": true }
 
+## Day 4 - OTP Verify with Redis EXPIRE ✅
+- Used Redis to store OTP with 5 min TTL
+- POST /otp/verify - 9ms latency
+- Returns 200 OK on success
