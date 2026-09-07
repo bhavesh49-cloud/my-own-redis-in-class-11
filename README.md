@@ -81,7 +81,7 @@ POST /banner
 
 # Day 5- Redis: JSON vs Hash - User Profile Cache Benchmark
 
-Why storing user profiles as `STRING (JSON)` vs `HASH` matters for real backend systems.
+Why storing user profiles as STRING (JSON) vs (HASH) matters for real backend systems.
 
 Built with Node.js + Express + ioredis.
 
@@ -89,7 +89,7 @@ Built with Node.js + Express + ioredis.
 When caching user profiles in Redis, most beginners do `SET user:123 JSON.stringify(user)`.
 It works, but to update 1 field you have to GET full JSON, parse, update, SET again.
 
-Is `HSET user:123 name "x" email "y"` better? Let's test.
+Is HSET user:123 name "x" email "y" better? Let's test.
 
 ### Tech Stack
 - Node.js, Express
