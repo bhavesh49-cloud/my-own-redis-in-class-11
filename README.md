@@ -78,3 +78,26 @@ POST /banner
 - Used Redis to store OTP with 5 min TTL
 - POST /otp/verify - 9ms latency
 - Returns 200 OK on success
+
+# Day 5- Redis: JSON vs Hash - User Profile Cache Benchmark
+
+Why storing user profiles as `STRING (JSON)` vs `HASH` matters for real backend systems.
+
+Built with Node.js + Express + ioredis.
+
+### The Problem
+When caching user profiles in Redis, most beginners do `SET user:123 JSON.stringify(user)`.
+It works, but to update 1 field you have to GET full JSON, parse, update, SET again.
+
+Is `HSET user:123 name "x" email "y"` better? Let's test.
+
+### Tech Stack
+- Node.js, Express
+- Redis + ioredis
+- Nodemon for dev
+
+### API Endpoints
+POST /user/:id/json  -> Save user as JSON string
+GET  /user/:id/json  -> Get user from JSON stringPOST /user/:id/hash  -> Save user as Hash
+GET  /user/:id/hash  -> Get user from Hash
+}
