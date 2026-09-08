@@ -101,3 +101,19 @@ POST /user/:id/json  -> Save user as JSON string
 GET  /user/:id/json  -> Get user from JSON stringPOST /user/:id/hash  -> Save user as Hash
 GET  /user/:id/hash  -> Get user from Hash
 }
+
+# ⚡ Redis OTP Engine — 39ms Email Delivery
+
+> Day 4 → Day 6 | 30 Days Building in Public | `void_systems`
+
+**Live Demo:** `localhost:3000/emails/prcess-one`
+**Final Performance:** **39ms Total** | TTFB 39ms | Download 0ms
+**Started at:** 140ms | **Improved by:** 72% in 2 days
+
+### The Story
+
+Day 4: Built a queued OTP system — 140ms
+Day 5: Optimized worker — 39ms
+Day 6: Stable, production-ready, Email sent ✅
+
+Proof from WebRequestKit (Rust-powered):
