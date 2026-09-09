@@ -104,7 +104,7 @@ GET  /user/:id/hash  -> Get user from Hash
 
 # ⚡ Redis OTP Engine — 39ms Email Delivery
 
-> Day 4 → Day 6 | 30 Days Building in Public | `void_systems`
+> Day 4 → Day 6 | 9 Days Building in Public | `void_systems`
 
 **Live Demo:** `localhost:3000/emails/prcess-one`
 **Final Performance:** **39ms Total** | TTFB 39ms | Download 0ms
@@ -117,3 +117,13 @@ Day 5: Optimized worker — 39ms
 Day 6: Stable, production-ready, Email sent ✅
 
 Proof from WebRequestKit (Rust-powered):
+
+# ⚡ 9ms.dev — Redis Engine
+
+> 9 Days Building in Public — Day 7/9 COMPLETED
+> bhaveshcoder.in | void_systems
+
+**Performance Today:** `POST /welcome-email → 105ms | TTFB 104ms`
+
+
+
