@@ -118,12 +118,57 @@ Day 6: Stable, production-ready, Email sent ✅
 
 Proof from WebRequestKit (Rust-powered):
 
-# ⚡ 9ms.dev — Redis Engine
+#  Redis Engine
 
 > 9 Days Building in Public — Day 7/9 COMPLETED
 > bhaveshcoder.in | void_systems
 
 **Performance Today:** `POST /welcome-email → 105ms | TTFB 104ms`
+
+> 9 Days Building in Public — Day 8/9 DONE, Day 9 tomorrow
+> by Bhavesh | bhaveshcoder.in | void_systems
+
+140ms → 9ms in 5 days. Redis from scratch.
+
+### Performance
+
+- Day 4: 140ms first queue
+- Day 5: 39ms stable
+- Day 7: 105ms welcome-email queued
+- Day 8: 9ms OTP verify + Pub/Sub
+- Day 9: Live Leaderboard — coming
+
+### What I Built Till Day 8
+
+1. Email Queue — welcome emails go to BullMQ queue, worker sends async
+2. OTP Verify — 9ms verify from Redis memory
+3. Notification Pub/Sub — one event published, many services notified instantly
+
+### Day 9 — Live Leaderboard
+
+What is it?
+A live ranking board that updates in real-time. When a user verifies OTP, their score goes up and everyone sees the rank change instantly. Like a game leaderboard.
+
+How it works in simple words:
+- Every user has a score in Redis
+- When they verify OTP, score +1
+- Redis sorts all users by score automatically
+- Pub/Sub pushes new leaderboard to everyone live
+
+No refresh needed. Real-time.
+
+This completes the system — Queue + 9ms + Pub/Sub + Live Leaderboard.
+
+### Tech
+
+Redis, BullMQ, Express
+
+### Launch
+
+Day 9 — bhaveshcoder.in/9ms
+
+---
+Built by Bhavesh — Day 8/9 Done
 
 
 
