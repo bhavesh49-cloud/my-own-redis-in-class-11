@@ -1,0 +1,14 @@
+{
+  "name": "09-live-leaderboard",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^4.22.2",
+    "ioredis": "^6.0.0"
+  }
+}
