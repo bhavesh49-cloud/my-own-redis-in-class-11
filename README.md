@@ -170,5 +170,149 @@ Day 9 — bhaveshcoder.in/9ms
 ---
 Built by Bhavesh — Day 8/9 Done
 
+# 🚀 Day 9 — Live Leaderboard with Redis
+
+## ✅ Day 9 Completed
+
+Today I built a **Live Leaderboard system using Redis**.
+
+The goal of this project was to understand how Redis can be used to store and update rankings in real time using **Sorted Sets**.
+
+---
+
+## 🏆 What I Built
+
+A real-time leaderboard where players can:
+
+* ➕ Add players and their scores
+* 🔄 Update scores
+* 📊 Automatically rank players
+* 🥇 Get the top players
+* 🔍 Check a player's rank
+* ⚡ Get fast leaderboard results using Redis
+
+---
+
+## 🛠️ Technologies Used
+
+* **Node.js**
+* **Express.js**
+* **Redis**
+* **JavaScript**
+* **Visual Studio Code**
+* **REST API**
+
+---
+
+## 🧠 What I Learned
+
+Today I learned how Redis **Sorted Sets (ZSETs)** can be used to build ranking systems.
+
+Important Redis commands/concepts I worked with:
+
+```text
+ZADD
+ZRANGE
+ZREVRANGE
+ZRANK
+ZREVRANK
+ZSCORE
+```
+
+The leaderboard stores players with their scores and Redis automatically keeps them ranked.
+
+---
+
+## 🔥 Example
+
+A leaderboard could look like:
+
+| Rank | Player   | Score |
+| ---- | -------- | ----- |
+| 🥇 1 | Player A | 950   |
+| 🥈 2 | Player B | 850   |
+| 🥉 3 | Player C | 720   |
+| 4    | Player D | 650   |
+
+When a player's score changes, the leaderboard updates automatically.
+
+---
+
+## 📡 API Examples
+
+### Add / Update Score
+
+```http
+POST /leaderboard/score
+```
+
+Example request:
+
+```json
+{
+  "player": "PlayerA",
+  "score": 950
+}
+```
+
+### Get Leaderboard
+
+```http
+GET /leaderboard
+```
+
+### Get Player Rank
+
+```http
+GET /leaderboard/rank/PlayerA
+```
+
+---
+
+## 📁 Project Structure
+
+```text
+day-9-live-leaderboard/
+│
+├── src/
+│   ├── server.js
+│   ├── redis.js
+│   └── leaderboard.js
+│
+├── package.json
+├── package-lock.json
+├── .gitignore
+└── README.md
+```
+
+---
+
+## 🎯 Day 9 Goal
+
+> **Build a live leaderboard using Redis and understand how Redis Sorted Sets can be used for high-performance ranking systems.**
+
+### Status
+
+✅ Redis connected
+✅ Leaderboard created
+✅ Player scores implemented
+✅ Ranking implemented
+✅ REST APIs implemented
+✅ Tested successfully
+
+---
+
+## 📈 Challenge Progress
+
+**Day 9 / 9 — COMPLETE 🎉**
+
+```text
+████████████████████ 100%
+```
+
+### 🔥 Day 9 Completed!
+
+ 
+
 
 
