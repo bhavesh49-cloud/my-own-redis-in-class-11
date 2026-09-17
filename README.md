@@ -1,6 +1,17 @@
 # my-own-redis-in-class-11
 # my-own-redis-in-class-11
 
+My Own Redis
+
+A Redis-inspired in-memory data store that I started building in Class 11 to understand how systems such as Redis work internally.
+
+Rather than only using Redis as an external service, I wanted to learn the underlying concepts by implementing core functionality myself and gradually building practical applications around it.
+
+The project evolved from a basic in-memory key-value store into a larger backend system involving caching, TTL-based expiration, queues, Pub/Sub notifications, and a live leaderboard.
+
+Goal: Learn by building the underlying concepts rather than treating Redis as a black box.
+
+
 ## What I learned about Redis
 
 ### 1. In-Memory Store
@@ -312,7 +323,85 @@ day-9-live-leaderboard/
 
 ### 🔥 Day 9 Completed!
 
+What I Built
+
+Core Data Store
+
+- In-memory key-value storage
+- Key-based "SET" / "GET" operations
+- Data expiration / TTL functionality
+- Command handling and data management
+
+Advanced Features
+
+- Caching
+- TTL-based temporary data such as OTPs
+- Queue-based processing
+- Pub/Sub-style notification system
+- Live leaderboard functionality
+- Sorted-set-style ranking operations
+
+Applications
+
+I used these concepts to build practical features rather than keeping the project as a collection of isolated commands.
+
+Examples include:
+
+- 🏆 Live leaderboard
+- 🔔 Notification system
+- ⚡ Caching
+- 🔐 Temporary OTP storage
+- 📋 Queue-based tasks
  
 
+Technology & Transparency
 
+This repository contains both my own implementations and applications built using existing technologies.
+
+My implementation
+
+The Redis-inspired components in this project were implemented by me as part of my attempt to understand how an in-memory data store works.
+
+Technologies / libraries used
+
+Other parts of the project use existing technologies and libraries where appropriate, including Node.js/Express, MongoDB, BullMQ, and Redis-related libraries.
+
+I distinguish between functionality I implemented myself and functionality provided by external libraries because the purpose of this project is to document my learning and implementation process honestly.
+
+
+Learning Journey
+
+I started this project in Class 11 with a simple question:
+
+“How does something like Redis actually work internally?”
+
+I initially built a basic in-memory key-value store. From there, I kept expanding the project as I learned more concepts:
+
+Key-Value Store → TTL → Caching → Queues → Pub/Sub → Leaderboard
+
+Each stage was an attempt to understand a different problem rather than simply adding features for the sake of complexity.
+
+The project is still a learning project, and it does not attempt to reproduce the full functionality, performance, or production reliability of Redis.
+
+Limitations
+
+This project is an educational Redis-inspired implementation created to understand the concepts behind in-memory data stores. It is not intended to be a production replacement for Redis.
+
+Current limitations include:
+
+- Limited command support: Only a subset of Redis-like commands and data structures are implemented.
+- Performance: The implementation has not been optimized to match the extremely high throughput and low latency of production Redis.
+- Persistence: It does not provide the same mature persistence mechanisms and recovery guarantees as Redis.
+- Concurrency: Advanced concurrency, thread-safety, and synchronization scenarios are not fully implemented or tested.
+- Scalability: The project is primarily designed for learning and experimentation rather than large-scale distributed deployments.
+- High availability: Replication, automatic failover, and Redis Cluster-style distributed operation are not fully implemented.
+- Memory management: Production-grade memory optimization, eviction policies, and memory allocation strategies are limited.
+- Protocol compatibility: The project does not aim for complete compatibility with the Redis protocol or every Redis client.
+- Production reliability: Extensive fault tolerance, security hardening, monitoring, and production-scale testing are outside the current scope.
+
+Future Improvements
+
+Possible future work includes implementing more Redis data structures and commands, improving concurrency, adding stronger persistence and recovery mechanisms, benchmarking performance against Redis, and exploring replication and distributed operation.
+
+«The purpose of this project is not to recreate every feature of Redis, but to learn how an in-memory data store works by building one myself.»
 
